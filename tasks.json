@@ -1,0 +1,57 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "bear -a scons -j16 use_llvm=yes platform=x11 target=debug",
+            "group": { // use_llvm=yes
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "build release",
+            "type": "shell",
+            "command": "scons -j16 use_llvm=yes tools=yes platform=x11 target=release_debug",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Clean scons",
+            "type": "shell",
+            "command": "scons -j16 use_llvm=yes platform=x11 target=debug --clean",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "label": "build",
+            "dependsOn": [
+                // this is used when we work on something which imports scenes, or materials - keeps project state clean
+                // todo: add support to handle removal of .import files inside directories too
+                //"reimport", // then force reimport by deleting project folder
+                "make", // execute build
+            ]
+        },
+        {
+            "label": "clean rebuild",
+            "dependsOn" : [
+                "Clean scons",
+                "make"
+            ]
+        },
+        {
+            "label": "clear project import cache",
+            "type": "shell",
+            "command": "rm -rf /home/gordon/Projects/CorpSquad/CorpSquad.ModelTest/.import/",
+        },
+    ]
+}

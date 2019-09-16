@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "GDB Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/godot.x11.tools.64.llvm",
+            "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],            
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "LLDB Standard",
+            "program": "${workspaceFolder}/bin/godot.x11.tools.64.llvm",
+            "cwd": "${workspaceFolder}",
+            "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],            
+        },
+        {
+            "name": "LLDB Debugger - Deep inspection",
+            "type" : "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/godot.x11.tools.64.llvm",
+            "cwd": "${workspaceRoot}",
+            "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],            
+        },
+    ]
+}
