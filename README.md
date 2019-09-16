@@ -20,3 +20,5 @@ Once you have the pre-requisites installed you need to update the following line
 ```json
  "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],  
 ```
+
+Happy hacking!
