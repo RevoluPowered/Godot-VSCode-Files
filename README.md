@@ -17,4 +17,6 @@ Plugins for advanced debugging in vscode:
 
 
 Once you have the pre-requisites installed you need to update the following line to be your project you would like to launch on starting the C++ build of godot:
+```json
  "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],  
+```
