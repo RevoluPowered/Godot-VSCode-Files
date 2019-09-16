@@ -14,3 +14,7 @@ This is the case for example for deconstructor issues, which I noticed that LLDB
 Plugins for advanced debugging in vscode:
 - C/C++ extension
 - CodeLLDB (tighter integration than the default C++ llvm provider instead of only output scanning, we support both in this vscode setup)
+
+
+Once you have the pre-requisites installed you need to update the following line to be your project you would like to launch on starting the C++ build of godot:
+ "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],  
