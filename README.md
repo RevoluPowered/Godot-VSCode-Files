@@ -3,7 +3,7 @@ The files you need for various debugging methods standardised for the best exper
 
 To use this with Godot you need the following installed systemwide:
 - Clang (for compiling godot with compilation db support)
-- Bear (for a working compilation db)
+- Bear (for a working compilation db - gives you full refactoring support and symbol lookup)
 - LLDB 
 - GDB
 
@@ -20,5 +20,12 @@ Once you have the pre-requisites installed you need to update the following line
 ```json
  "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],  
 ```
+
+This adds several tasks make sure to run the full rebuild:
+- Run vscode task 'clean scons'
+- Run vscode task build.
+
+You can select from 3 seperate debugging integrations within vscode, which has advantages mentioned above.
+Press F5 to debug.
 
 Happy hacking!
