@@ -6,6 +6,7 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "editor.formatOnSave": true,
     "files.associations": {
         "array": "cpp",
         "hash_map": "cpp",
@@ -69,6 +70,7 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "future": "cpp"
     }
 }

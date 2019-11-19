@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/godot.x11.tools.64.llvm",
-            "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],            
+            "args": ["--path", "/home/gordon/Projects/TestProject", "-e", "-v"],            
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -29,7 +29,7 @@
             "name": "LLDB Standard",
             "program": "${workspaceFolder}/bin/godot.x11.tools.64.llvm",
             "cwd": "${workspaceFolder}",
-            "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],            
+            "args": ["--path", "/home/gordon/Projects/TestProject", "-e", "-v"],            
         },
         {
             "name": "LLDB Debugger - Deep inspection",
@@ -37,7 +37,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/bin/godot.x11.tools.64.llvm",
             "cwd": "${workspaceRoot}",
-            "args": ["--path", "/home/gordon/Projects/CorpSquad/CorpSquad.ModelTest", "-e", "-v"],            
+            "args": ["--path", "/home/gordon/Projects/TestProject", "-e", "-v"],            
         },
     ]
 }
