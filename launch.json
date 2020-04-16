@@ -5,11 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "msvc debug",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/godot.windows.tools.64.exe",
+            "args": [
+                "--path",
+                "C:/Users/Gordon/Projects/TestProject",
+                "-e",
+                "-v"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "make"
+        },
+        {
             "name": "GDB Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/godot.x11.tools.64.llvm",
-            "args": ["--path", "/home/gordon/Projects/TestProject", "-e", "-v"],            
+            "program": "${workspaceFolder}/bin/godot.windows.tools.64.exe",
+            "args": [
+                "--path",
+                "C:/Users/Gordon/Projects/TestProject",
+                "-e",
+                "-v"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -27,17 +49,27 @@
             "type": "lldb",
             "request": "launch",
             "name": "LLDB Standard",
-            "program": "${workspaceFolder}/bin/godot.x11.tools.64.llvm",
+            "program": "${workspaceFolder}/bin/godot.x11.tools.64",
             "cwd": "${workspaceFolder}",
-            "args": ["--path", "/home/gordon/Projects/TestProject", "-e", "-v"],            
+            "args": [
+                "--path",
+                "/home/gordon/Projects/BuildTesting",
+                "-e",
+                "-v"
+            ],
         },
         {
             "name": "LLDB Debugger - Deep inspection",
-            "type" : "lldb",
+            "type": "lldb",
             "request": "launch",
             "program": "${workspaceRoot}/bin/godot.x11.tools.64.llvm",
             "cwd": "${workspaceRoot}",
-            "args": ["--path", "/home/gordon/Projects/TestProject", "-e", "-v"],            
+            "args": [
+                "--path",
+                "/home/gordon/Projects/BuildTesting",
+                "-e",
+                "-v"
+            ],
         },
     ]
 }

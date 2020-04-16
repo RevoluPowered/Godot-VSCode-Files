@@ -6,23 +6,37 @@
         {
             "label": "make",
             "type": "shell",
-            "command": "bear -a scons -j16 use_llvm=yes platform=x11 target=debug",
+            "command": "scons -j16 platform=windows target=debug",
             "group": { // use_llvm=yes
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": "$gcc"
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
         },
         {
             "label": "build release",
             "type": "shell",
-            "command": "scons -j16 use_llvm=yes tools=yes platform=x11 target=release_debug",
+            "command": "scons -j16 tools=yes platform=windows target=release_debug",
             "problemMatcher": "$gcc"
         },
         {
-            "label": "Clean scons",
+            "label": "clean release",
             "type": "shell",
-            "command": "scons -j16 use_llvm=yes platform=x11 target=debug --clean",
+            "command": "scons -j16 tools=yes platform=windows target=release_debug --clean",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "build clean",
+            "type": "shell",
+            "command": "scons -j16 platform=windows target=debug --clean",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
@@ -39,14 +53,15 @@
                 // todo: add support to handle removal of .import files inside directories too
                 //"reimport", // then force reimport by deleting project folder
                 "make", // execute build
-            ]
-        },
-        {
-            "label": "clean rebuild",
-            "dependsOn" : [
-                "Clean scons",
-                "make"
-            ]
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
         },
         {
             "label": "clear project import cache",
