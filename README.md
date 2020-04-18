@@ -8,7 +8,7 @@ To use this with Godot you need the following installed systemwide:
 - LLDB 
 - GDB
 
-Optional patches to give you compilation db natively from scons, this is much faster than BEAR.
+Optional patches to give you compilation db natively from scons, this is much faster than BEAR. (Bear takes a couple of minutes, and intercept build takes 20 minutes, where as the native PR just spits it out in a few seconds)
 - https://github.com/godotengine/godot/pull/32848
 
 Recent updates:
