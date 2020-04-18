@@ -1,10 +1,7 @@
 # Godot-VSCode-Files
 The files you need for various debugging methods standardised for the best experience with working compilation db
-
-To use this with Godot you need the following installed systemwide:
-- visual studio
+- VS C++ compiler (for windows / non mingw)
 - Clang (for compiling godot with compilation db support)
-- Bear (for a working compilation db - gives you full refactoring support and symbol lookup)
 - LLDB 
 - GDB
 
