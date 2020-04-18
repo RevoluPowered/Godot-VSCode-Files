@@ -8,6 +8,9 @@ To use this with Godot you need the following installed systemwide:
 - LLDB 
 - GDB
 
+Optional patches to give you compilation db:
+- https://github.com/godotengine/godot/pull/32848
+
 Recent updates:
 - F5 debugging will always trigger a build now in the recent edit
 - Saving will trigger clang formatting
