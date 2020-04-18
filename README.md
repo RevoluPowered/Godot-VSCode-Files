@@ -13,7 +13,12 @@ Recent updates:
 - Saving will trigger clang formatting
 - We added visual studio support
 
+Incoming update:
+- configuration for osx
+
 Ideally I want to have a UI to ask you "What godot project do you want to launch, for debugging" even just a generic dropdown in vscode, I don't have time away from working on Godot FBX to implement this so for now you have to manually set the path in the configuration, but it's not hard.
+
+# Linux Support
 
 Using both debuggers is advisable as if one spits an error out which is hard to debug the other can find it easier in some cases.
 This is the case for example for deconstructor issues, which I noticed that LLDB can't properly detect whereas GDB can.
