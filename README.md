@@ -8,7 +8,7 @@ To use this with Godot you need the following installed systemwide:
 - LLDB 
 - GDB
 
-Optional patches to give you compilation db:
+Optional patches to give you compilation db natively from scons, this is much faster than BEAR.
 - https://github.com/godotengine/godot/pull/32848
 
 Recent updates:
